@@ -1,24 +1,32 @@
 """
-fhir/validator.py
------------------
-Validates FHIR bundles and checks for required fields or schema errors.
+utils/validator.py
+------------------
+Performs schema validation for healthcare data consistency.
 """
 
-import json
+import pandas as pd
 
 
-def validate_fhir_structure(bundle_path):
+def validate_columns(df, required_cols):
     """
-    Validates FHIR bundle structure to ensure compliance with FHIR format.
+    Ensures all required columns exist in the DataFrame.
     """
-    with open(bundle_path, "r") as f:
-        data = json.load(f)
+    missing = [col for col in required_cols if col not in df.columns]
+    if missing:
+        raise ValueError(f"Missing required columns: {missing}")
+    else:
+        print("✅ All required columns validated.")
+    return True
 
-    if "resourceType" not in data or data["resourceType"] != "Bundle":
-        raise ValueError("Invalid FHIR bundle: missing or incorrect 'resourceType'.")
-
-    if "entry" not in data:
-        raise ValueError("Invalid FHIR bundle: missing 'entry' section.")
-
-    print(f"✅ FHIR bundle {bundle_path} passed basic validation.")
+def validate_datatypes(df, expected_types):
+    """
+    Verifies that each column matches the expected data type.
+    """
+    mismatched = {}
+    for col, dtype in expected_types.items():
+        if col in df.columns and not pd.api.types.is_dtype_equal(df[col].dtype, dtype):
+            mismatched[col] = str(df[col].dtype)
+    if mismatched:
+        raise TypeError(f"Mismatched data types: {mismatched}")
+    print("🧩 Column data types validated successfully.")
     return True
