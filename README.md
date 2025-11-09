@@ -1,5 +1,14 @@
 # Carelytics – Healthcare Data Analytics Library
 
+[![PyPI Version](https://img.shields.io/pypi/v/carelytics?color=blue&label=PyPI%20Version)](https://pypi.org/project/carelytics/)
+[![Downloads](https://img.shields.io/pypi/dm/carelytics?color=brightgreen&label=Downloads)](https://pypistats.org/packages/carelytics)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python](https://img.shields.io/badge/Python-3.7%2B-blue)](https://www.python.org/)
+
+*A modular Python package for healthcare data cleaning, validation, and revenue cycle insights.*
+
+# Carelytics – Healthcare Data Analytics Library
+
 *A modular Python package for healthcare data cleaning, validation, and revenue cycle insights.*
 
 ---
