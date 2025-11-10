@@ -186,16 +186,22 @@ pip install carelytics
 ```
 
 ---
+## Authors & Contributors
 
-## 👤 Author
+Rohan Desai
+Dallas, Texas, USA
+Email: rohan.acme@gmail.com
+GitHub: https://github.com/rohan-desai
+LinkedIn: https://www.linkedin.com/in/rohandesai07/
 
-**Rohan Desai**
-📧 [rohan.acme@gmail.com](mailto:rohan.acme@gmail.com)
-💼 GitHub: [rohan-desai](https://github.com/rohan-desai)
-
+Vaishnavi Gadve
+Irving, Texas, USA
+Email: vaishnavigadve143@gmail.com
+GitHub: https://github.com/vaish2412
+LinkedIn: https://www.linkedin.com/in/vaishnavi-gadve-4b577512a/
 ---
 
 ## 🧪 License
 
 MIT License
-© 2025 Rohan Desai
+© 2025 Rohan Desai & Vaishnavi Gadve
