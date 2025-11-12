@@ -25,6 +25,14 @@ Built with **Pandas**, **NumPy**, and **Scikit-learn**, Carelytics empowers anal
 
 ---
 
+## Compliance & Data Privacy
+
+* Carelytics adheres to key data governance principles:
+* PHI de-identification and masking via `carelytics.utils.deid`
+* HIPAA-friendly workflows for analytics and interoperability
+* Strict handling of schema validation to ensure secure data exchange
+
+
 ## Package Architecture
 
 ```
