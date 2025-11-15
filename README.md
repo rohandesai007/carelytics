@@ -180,7 +180,7 @@ df = pd.read_csv("claims.csv")
 # Validate structure
 validator.validate_columns(df, ["claim_id", "payer", "amount", "denial_flag"])
 
-# Clean and prepare
+# Clean and prepare 
 df = cleaner.fill_missing(df, "median")
 
 # Run prediction

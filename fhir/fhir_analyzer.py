@@ -1,7 +1,7 @@
 """
 carelytics.fhir.fhir_analyzer
 -----------------------------
-Performs integrity checks and summary analytics on FHIR-compliant JSON resources.
+Performs integrity checks and summary analytics on FHIR-compliant JSON resources. 
 """
 
 import json

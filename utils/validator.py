@@ -6,7 +6,7 @@ Performs schema validation for healthcare data consistency.
 
 import pandas as pd
 
-
+   
 def validate_columns(df, required_cols):
     """
     Ensures all required columns exist in the DataFrame.
@@ -17,7 +17,7 @@ def validate_columns(df, required_cols):
     else:
         print("✅ All required columns validated.")
     return True
-
+  
 def validate_datatypes(df, expected_types):
     """
     Verifies that each column matches the expected data type.
