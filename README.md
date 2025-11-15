@@ -245,5 +245,5 @@ LinkedIn: [https://www.linkedin.com/in/vaishnavi-gadve-4b577512a/](https://www.l
 ## 🧪 License
 
 MIT License  
-© 2025 Rohan Desai & Vaishnavi Gadve
+© 2025 Rohan Desai & Vaishnavi Sanjay Gadve
 
