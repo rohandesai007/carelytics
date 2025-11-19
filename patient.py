@@ -18,6 +18,10 @@ class PatientFrame(pd.DataFrame):
     @property
     def _constructor(self):
         return PatientFrame
+    
+    # -------------------------------------------
+    # Removes PII columns for HIPAA-compliant usage
+    # -------------------------------------------
 
     def deidentify(self, remove=None):
         """
@@ -38,6 +42,10 @@ class PatientFrame(pd.DataFrame):
 
         print("✅ Patient data de-identified successfully.")
         return self
+    
+    # -----------------------------------------------------
+    # Calculates % of patients readmitted within X days
+    # -----------------------------------------------------
 
     def readmission_rate(self, days=30):
         """
@@ -60,6 +68,9 @@ class PatientFrame(pd.DataFrame):
         readmissions = 0
         total_patients = self["patient_id"].nunique()
 
+        # Loop through each patient and check if any admission occurred
+        # within `days` of the previous discharge
+
         for pid, group in self.groupby("patient_id"):
             discharge_dates = group["discharge_date"].values
             admit_dates = group["admit_date"].values
@@ -71,7 +82,9 @@ class PatientFrame(pd.DataFrame):
         rate = (readmissions / total_patients) * 100
         print(f"📊 Readmission rate ({days} days): {rate:.2f}%")
         return rate
-
+    # -----------------------------------------------------
+    # Computes the average length of stay (LOS) in days
+    # -----------------------------------------------------
     def length_of_stay_mean(self):
         """Returns the average length of stay (LOS) in days."""
         if {"admit_date", "discharge_date"}.issubset(self.columns):
