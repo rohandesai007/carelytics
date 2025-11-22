@@ -37,7 +37,7 @@ class VitalFrame(pd.DataFrame):
         return self
 
     def vital_summary(self):
-        """Returns basic statistics for all numeric columns."""
+        """Returns basic statistics for all the numeric columns."""
         summary = self.describe().T
         print("📊 Vital sign summary statistics generated.")
         return summary
