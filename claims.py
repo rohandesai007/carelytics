@@ -26,7 +26,7 @@ class ClaimFrame(pd.DataFrame):
             self["icd_code"] = self["icd_code"].astype(str).str.strip().str.upper()
             print(f"🩻 ICD-{icd_version} codes standardized.")
         return self
-
+#Adding new code - code under review/testing
     def denial_rate(self):
         """
         Calculates the percentage of denied claims.
@@ -52,7 +52,7 @@ class ClaimFrame(pd.DataFrame):
         efficiency = approved / total if total else 0
         print(f"💵 Revenue cycle efficiency: {efficiency:.2%}")
         return efficiency
-
+#Adding new code - code under review/testing
     def average_payment_delay(self):
         """
         Calculates the average payment delay in days between claim date and payment date.
