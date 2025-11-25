@@ -23,7 +23,8 @@ class EncounterFrame(pd.DataFrame):
         total = len(self)
         print(f"🧾 Total encounters: {total}")
         return total
-
+        
+#Adding new code - code under review/testing
     def encounters_per_patient(self):
         """Returns average number of encounters per patient."""
         if "patient_id" in self.columns:
@@ -32,7 +33,8 @@ class EncounterFrame(pd.DataFrame):
             return avg
         else:
             raise ValueError("patient_id column required.")
-
+            
+#Adding new code - code under review/testing
     def average_length_of_stay(self):
         """Calculates mean LOS for encounters."""
         if {"admit_date", "discharge_date"}.issubset(self.columns):
