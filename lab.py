@@ -33,7 +33,7 @@ class LabFrame(pd.DataFrame):
         )
         print(f"🧫 Flagged abnormal values in {self['flag'].value_counts().to_dict()}")
         return self
-
+#Adding new code - code under review/testing
     def abnormal_rate(self):
         """Calculates percentage of abnormal lab results."""
         if "flag" not in self.columns:
@@ -41,7 +41,7 @@ class LabFrame(pd.DataFrame):
         abnormal = (self["flag"] == "Abnormal").mean() * 100
         print(f"⚠️ Abnormal lab rate: {abnormal:.2f}%")
         return abnormal
-
+#Adding new code - code under review/testing
     def lab_trends(self, lab_name):
         """
         Returns trend of lab values over time for a given lab test.
