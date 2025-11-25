@@ -20,7 +20,7 @@ class ClaimFrame(pd.DataFrame):
 
     def clean_codes(self, icd_version="10"):
         """
-        Cleans ICD or CPT codes by stripping spaces and converting to uppercase.
+        Cleans ICD/CPT codes by stripping spaces and converting to uppercase.
         """
         if "icd_code" in self.columns:
             self["icd_code"] = self["icd_code"].astype(str).str.strip().str.upper()
