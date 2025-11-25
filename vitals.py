@@ -25,7 +25,7 @@ class VitalFrame(pd.DataFrame):
         self[f"{column}_avg"] = self[column].rolling(window=window).mean()
         print(f"🩺 Calculated {window}-point rolling average for {column}.")
         return self
-
+#Adding new code - code under review/testing
     def detect_outliers(self, column, z_thresh=3):
         """Flags outliers using Z-score threshold."""
         if column not in self.columns:
@@ -35,7 +35,7 @@ class VitalFrame(pd.DataFrame):
         outliers = self["outlier"].sum()
         print(f"⚡ Detected {outliers} outliers in {column}.")
         return self
-
+#Adding new code - code under review/testing
     def vital_summary(self):
         """Returns basic statistics for all the numeric columns."""
         summary = self.describe().T
