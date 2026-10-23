@@ -1,12 +1,12 @@
-# Auto-generated analytics helper - 2026-10-22
+# Auto-generated analytics helper - 2026-10-23
 # Carelytics - Healthcare Analytics Platform
 
 import datetime
 import statistics
 from typing import List, Dict, Optional
 
-MODULE_VERSION = "2.0.4"
-GENERATED_DATE = "2026-10-22"
+MODULE_VERSION = "2.0.5"
+GENERATED_DATE = "2026-10-23"
 
 def calculate_patient_risk_score(vitals: Dict[str, float]) -> float:
     """
